@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { Toaster, toast } from 'react-hot-toast';
+import sr from '../../utils/scrollReveal';
 import db from "../../utils/firebase";
 import "./contact.styles.css";
 
@@ -11,6 +12,14 @@ const Contact = () => {
         content: ""
     });
     const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        sr.reveal('.contact__title', {});
+        sr.reveal('.contact__subtitle', { delay: 200 });
+        sr.reveal('.contact__input', { delay: 400 });
+        sr.reveal('.contact__button', { interval: 200 });
+        console.log("Contact");
+    }, []);
 
     const sendEmailAndSaveToDB = (e) => {
         e.preventDefault();

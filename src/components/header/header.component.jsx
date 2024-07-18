@@ -12,6 +12,8 @@ const Header = () => {
     const [totalVisits, setTotalVisits] = useState(0);
     const [isLogoHidden, setIsLogoHidden] = useState(false);
 
+    const resumeLink = "https://www.topcv.vn/xem-cv/VAZTXAMFBFNTVlQADlEABARQBgZWVgcHBQVfAQ8998";
+
     useEffect(() => {
         countPageVisit();
     }, []);
@@ -106,6 +108,16 @@ const Header = () => {
                                 onClick={() => handleMenuItemClick(3)}
                             >
                                 Contact
+                            </a>
+                        </li>
+                        <li className="nav__item">
+                            <a 
+                                href={resumeLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="nav__link"
+                            >
+                                Download CV
                             </a>
                         </li>
                     </ul>
