@@ -9,7 +9,7 @@ const About = props => {
         sr.reveal('.about__text',{delay: 200}); 
     });
 
-    const onlinePicture = "https://media.licdn.com/dms/image/D5603AQHwuwahzqJn5A/profile-displayphoto-shrink_800_800/0/1711608914970?e=1724284800&v=beta&t=2H51Id3tYJDS4V_ibYyCVBwHVNXvJfe0TzUZX912ZVo";
+    const onlinePicture = "https://avatars.githubusercontent.com/u/94129871?s=400&u=2ecb4d2c2a87f8c50db7df2dabcb9fd4144422ee&v=4";
     const resumeLink = "https://www.topcv.vn/xem-cv/VAZTXAMFBFNTVlQADlEABARQBgZWVgcHBQVfAQ8998";
 
     return (

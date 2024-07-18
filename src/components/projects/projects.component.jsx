@@ -21,8 +21,8 @@ import Lumi3 from '../../assets/projects/unnamed2.webp';
 import Lumi4 from '../../assets/projects/unnamed3.webp';
 // Lumi mobile AI images
 import CCVC1 from '../../assets/projects/ccvc/login_ccvc.png';
-import CCVC2 from '../../assets/projects/ccvc/Họp_List_Ngày.png';
-import CCVC3 from '../../assets/projects/ccvc/Họp_Lịch_Ngày.png';
+import CCVC2 from '../../assets/projects/ccvc/day_meet.png';
+import CCVC3 from '../../assets/projects/ccvc/day_list_meet.png';
 import CCVC4 from '../../assets/projects/ccvc/Chat.png';
 
 import './projects.styles.css';
