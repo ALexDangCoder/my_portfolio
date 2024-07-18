@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my_portfolio/static/css/main.ccf93e3e.css",
-    "main.js": "/my_portfolio/static/js/main.c06b5be2.js",
+    "main.css": "/my_portfolio/static/css/main.1d2abe27.css",
+    "main.js": "/my_portfolio/static/js/main.b0fbae17.js",
     "static/media/Influencer_profile.png": "/my_portfolio/static/media/Influencer_profile.926c2d8c2f830dfcb034.png",
     "static/media/Choose_Influnecers.png": "/my_portfolio/static/media/Choose_Influnecers.e28be23c564e281959ec.png",
     "static/media/IF_blocked.png": "/my_portfolio/static/media/IF_blocked.ff97ead250757f2b7399.png",
@@ -24,11 +24,11 @@
     "static/media/day_meet.png": "/my_portfolio/static/media/day_meet.70ca051550dff05b5d1b.png",
     "static/media/mf-avatar.svg": "/my_portfolio/static/media/mf-avatar.7b735e86b418292c156bc9a26437d951.svg",
     "index.html": "/my_portfolio/index.html",
-    "main.ccf93e3e.css.map": "/my_portfolio/static/css/main.ccf93e3e.css.map",
-    "main.c06b5be2.js.map": "/my_portfolio/static/js/main.c06b5be2.js.map"
+    "main.1d2abe27.css.map": "/my_portfolio/static/css/main.1d2abe27.css.map",
+    "main.b0fbae17.js.map": "/my_portfolio/static/js/main.b0fbae17.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccf93e3e.css",
-    "static/js/main.c06b5be2.js"
+    "static/css/main.1d2abe27.css",
+    "static/js/main.b0fbae17.js"
   ]
 }
