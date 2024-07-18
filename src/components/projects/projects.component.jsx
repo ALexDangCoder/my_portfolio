@@ -7,10 +7,10 @@ import HypeApp4 from '../../assets/projects/IF_overview_blocked.png';
 import HypeApp5 from '../../assets/projects/Influencer_profile.png';
 import HypeApp6 from '../../assets/projects/login.png';
 import HypeApp7 from '../../assets/projects/matching_book_now.png';
-import Lumi1 from '../../assets/projects/lumi1.png';
-import Lumi2 from '../../assets/projects/lumi2.png';
-import Lumi3 from '../../assets/projects/lumi3.png';
-import Lumi4 from '../../assets/projects/lumi4.png';
+import Lumi1 from '../../assets/projects/unnamed.webp';
+import Lumi2 from '../../assets/projects/unnamed1.webp';
+import Lumi3 from '../../assets/projects/unnamed2.webp';
+import Lumi4 from '../../assets/projects/unnamed3.webp';
 import './projects.styles.css';
 
 const Projects = props => {
