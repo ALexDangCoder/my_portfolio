@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
-import firebase from 'firebase/app';
 import db from "../../utils/firebase";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,7 +8,6 @@ import './header.styles.css';
 const Header = () => {
     const [showMenu, setShowMenu] = useState("nav__menu");
     const [activeIndex, setActiveIndex] = useState(0);
-    const [totalVisits, setTotalVisits] = useState(0);
     const [isLogoHidden, setIsLogoHidden] = useState(false);
 
     const resumeLink = "https://www.topcv.vn/xem-cv/VAZTXAMFBFNTVlQADlEABARQBgZWVgcHBQVfAQ8998";
