@@ -30,7 +30,6 @@ const Header = () => {
                     newCount = doc.data().count + 1;
                     transaction.update(docRef, { count: newCount });
                 }
-                setTotalVisits(newCount);
             });
         } catch (error) {
             console.error("Error counting page visit: ", error);
@@ -49,7 +48,6 @@ const Header = () => {
             snapshot.forEach(doc => {
                 total += doc.data().count;
             });
-            setTotalVisits(total);
             setIsLogoHidden(true);
             toast.info(`Total page visits: ${total}`);
             setTimeout(() => setIsLogoHidden(false), 3000); // Show the logo again after 3 seconds
