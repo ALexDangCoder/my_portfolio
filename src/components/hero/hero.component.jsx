@@ -17,7 +17,7 @@ const Hero = () => {
                             Senior Mobile Engineer and Tech Lead. Architecting production Flutter and iOS native applications serving millions of users.
                         </p>
                         <p className="home__subtext">
-                            Six years of engineering leadership across high-scale fintech (Viettel Money), national data exchange platforms (VNDT), enterprise ecosystems at KCI Solutions, and nationwide retail warranty networks (Hoa Phat).
+                            Six years of engineering leadership across high-scale fintech (Viettel Money), Web3 trading &amp; non-custodial wallets (XBIT), national data exchange platforms (VNDT), and enterprise ecosystems at KCI Solutions.
                         </p>
                         <div className="home__actions">
                             <a href="#work" className="button button--dark">

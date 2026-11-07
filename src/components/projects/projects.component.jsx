@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
+// Xbit Web3 & Perps DEX Images
+import Xbit1 from '../../assets/projects/xbit/xbit_1.webp';
+import Xbit2 from '../../assets/projects/xbit/xbit_2.webp';
+import Xbit3 from '../../assets/projects/xbit/xbit_3.webp';
+import Xbit4 from '../../assets/projects/xbit/xbit_4.webp';
+
 // HypeSociety Mobile Images
 import HypeApp1 from '../../assets/projects/7845DB0F-E14E-48E4-86F3-758433CCF3C4.png';
 import HypeApp2 from '../../assets/projects/FILTER_IF.png';
@@ -55,7 +61,51 @@ const Projects = () => {
                     Commercial enterprise platforms, government software, and open-source systems.
                 </p>
 
-                {/* 1. Vietnam Data Exchange (VNDT) */}
+                {/* 1. XBIT: Web3 & Perps DEX */}
+                <div className="work__project-block" data-reveal>
+                    <div className="work__project-header">
+                        <div className="work__project-title-group">
+                            <h3 className="work__project-title">XBIT — Web3 Trading &amp; Perps DEX</h3>
+                            <div className="work__project-meta">
+                                <span className="work__meta-tag">Lead Mobile Engineer</span>
+                                <span className="work__meta-tag">Solana • Web3 DeFi</span>
+                            </div>
+                        </div>
+                        <div className="work__links-row">
+                            <a href="https://apps.apple.com/vn/app/xbit-buy-bitcoin-perps-dex/id6747072897" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                App Store
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.xtech.xbitmobile" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Google Play
+                            </a>
+                            <a href="https://xbit.com" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Platform
+                            </a>
+                        </div>
+                    </div>
+                    <p className="work__project-desc">
+                        High-frequency decentralized perpetuals (Perps DEX) and crypto trading mobile platform built on Solana. Engineered enterprise-grade MPC key management with Turnkey SDK (biometrics and passkey wallet creation), leveraged trading order book execution, real-time GraphQL market streaming feeds, automated Shorebird OTA code push CI/CD, and BLoC 9.0 reactive state architecture.
+                    </p>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Flutter</span>
+                        <span className="work__tag-item">Solana Web3</span>
+                        <span className="work__tag-item">Turnkey SDK (MPC)</span>
+                        <span className="work__tag-item">GraphQL Codegen</span>
+                        <span className="work__tag-item">BLoC 9.0</span>
+                        <span className="work__tag-item">Perps DEX</span>
+                        <span className="work__tag-item">Shorebird OTA</span>
+                    </div>
+
+                    <h4 className="work__gallery-title">Mobile Interface Frames</h4>
+                    <div className="work__container">
+                        <div className="work__img" onClick={() => openModal(Xbit1)}><img src={Xbit1} alt="Xbit trading screen 1" /></div>
+                        <div className="work__img" onClick={() => openModal(Xbit2)}><img src={Xbit2} alt="Xbit wallet screen 2" /></div>
+                        <div className="work__img" onClick={() => openModal(Xbit3)}><img src={Xbit3} alt="Xbit prediction market screen 3" /></div>
+                        <div className="work__img" onClick={() => openModal(Xbit4)}><img src={Xbit4} alt="Xbit perps DEX screen 4" /></div>
+                    </div>
+                </div>
+
+                {/* 2. Vietnam Data Exchange (VNDT) */}
                 <div className="work__project-block" data-reveal>
                     <div className="work__project-header">
                         <div className="work__project-title-group">

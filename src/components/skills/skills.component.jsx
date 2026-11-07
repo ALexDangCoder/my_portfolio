@@ -108,7 +108,7 @@ const Skills = () => {
                                     <span className="skills__row-level">Enterprise</span>
                                 </div>
                                 <span className="skills__row-details">
-                                    RESTful APIs, WebSockets streaming, Dio, Retrofit, Biometric auth, Smart OTP.
+                                    RESTful APIs, GraphQL codegen, WebSockets, Solana Web3, Turnkey MPC wallet, Biometrics.
                                 </span>
                             </div>
                         </div>
@@ -190,7 +190,7 @@ const Skills = () => {
                                     <span className="skills__row-level">Advanced</span>
                                 </div>
                                 <span className="skills__row-details">
-                                    GitHub Actions, GitLab CI, Fastlane scripts, automated build distribution.
+                                    GitHub Actions, GitLab CI, Fastlane, Shorebird OTA code push, automated release pipelines.
                                 </span>
                             </div>
 

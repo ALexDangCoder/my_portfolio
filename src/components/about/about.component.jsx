@@ -18,7 +18,7 @@ const About = () => {
                             My primary specialty is Flutter and Dart, combined with deep native iOS engineering in Swift and Objective-C, along with modern fullstack architectures across Next.js, Go microservices, and NestJS. I champion Clean Architecture and predictable state machines (BLoC, Cubit, Provider) to build robust codebases that remain maintainable across years of active feature development.
                         </p>
                         <p>
-                            In production, I have led engineering teams delivering solutions at national scale: from Vietnam Data Exchange (VNDT) and Viettel Money's iOS payment ecosystem, to Hoa Phat's nationwide retail warranty infrastructure and paperless governance systems for Vietnam's Ministry of Planning and Investment.
+                            In production, I have led engineering teams delivering solutions at national scale: from Web3 decentralized trading &amp; non-custodial wallets (XBIT) and Vietnam Data Exchange (VNDT), to Viettel Money's iOS payment ecosystem and paperless governance systems for Vietnam's Ministry of Planning and Investment.
                         </p>
 
                         <div className="about__timeline">
@@ -31,7 +31,7 @@ const About = () => {
                                     </div>
                                     <span className="about__timeline-role">Technical Lead &amp; Senior Mobile Engineer</span>
                                     <p className="about__timeline-desc">
-                                        Directing architectural strategy for Vietnam Data Exchange (VNDT), CertEdge Global certification prep ecosystem, KCI Connect mobile app, and Noidi AI.
+                                        Directing architectural strategy for Web3 trading platform XBIT, Vietnam Data Exchange (VNDT), CertEdge Global certification prep ecosystem, KCI Connect, and Noidi AI.
                                     </p>
                                 </div>
 
