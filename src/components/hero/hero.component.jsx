@@ -1,9 +1,8 @@
 import React from 'react';
+import portraitImg from "../../assets/img/alex-dang-portrait.jpg";
 import "./hero.styles.css";
 
 const Hero = () => {
-    const portraitUrl = "https://avatars.githubusercontent.com/u/94129871?s=400&u=2ecb4d2c2a87f8c50db7df2dabcb9fd4144422ee&v=4";
-
     return (
         <section className="home bd-grid" id="home">
             <div className="home__grid">
@@ -42,7 +41,7 @@ const Hero = () => {
                     </div>
 
                     <div className="home__visual-frame">
-                        <img src={portraitUrl} alt="Alex Dang portrait" />
+                        <img src={portraitImg} alt="Alex Dang portrait" fetchPriority="high" />
                     </div>
                 </div>
 
