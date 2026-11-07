@@ -1,137 +1,51 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from 'react';
-import db from "../../utils/firebase";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from 'react';
 import './header.styles.css';
 
 const Header = () => {
-    const [showMenu, setShowMenu] = useState("nav__menu");
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [isLogoHidden, setIsLogoHidden] = useState(false);
-
+    const [showMenu, setShowMenu] = useState(false);
     const resumeLink = "https://www.topcv.vn/xem-cv/VAZTXAMFBFNTVlQADlEABARQBgZWVgcHBQVfAQ8998";
 
-    useEffect(() => {
-        countPageVisit();
-    }, []);
-
-    const countPageVisit = async () => {
-        const today = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
-        const docRef = db.collection('pageVisits').doc(today);
-
-        try {
-            await db.runTransaction(async (transaction) => {
-                const doc = await transaction.get(docRef);
-                let newCount = 1;
-                if (!doc.exists) {
-                    transaction.set(docRef, { count: newCount });
-                } else {
-                    newCount = doc.data().count + 1;
-                    transaction.update(docRef, { count: newCount });
-                }
-            });
-        } catch (error) {
-            console.error("Error counting page visit: ", error);
-        }
-    };
-
-    const handleMenuItemClick = (index) => {
-        setActiveIndex(index);
-        setShowMenu("nav__menu");
-    };
-
-    const handleLogoClick = async () => {
-        try {
-            const snapshot = await db.collection('pageVisits').get();
-            let total = 0;
-            snapshot.forEach(doc => {
-                total += doc.data().count;
-            });
-            setIsLogoHidden(true);
-            toast.info(`Total page visits: ${total}`);
-            setTimeout(() => setIsLogoHidden(false), 3000); // Show the logo again after 3 seconds
-        } catch (error) {
-            console.error("Error fetching total page visits: ", error);
-        }
+    const closeMenu = () => {
+        setShowMenu(false);
     };
 
     return (
         <header className="l-header">
             <nav className="nav bd-grid">
                 <div>
-                    <a 
-                        href="#home" 
-                        className={`nav__logo ${isLogoHidden ? 'hidden' : ''}`} 
-                        onClick={handleLogoClick}
-                    >
-                        Alex Dang
+                    <a href="#home" className="nav__logo" onClick={closeMenu}>
+                        ALEX DANG
                     </a>
                 </div>
-                <div className={showMenu} id="nav-menu">
+                <div className={`nav__menu ${showMenu ? 'show' : ''}`} id="nav-menu">
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <a 
-                                href="#home" 
-                                className={`nav__link ${activeIndex === 0 ? 'active' : ''}`} 
-                                onClick={() => handleMenuItemClick(0)}
-                            >
-                                Home
-                            </a>
+                            <a href="#home" className="nav__link" onClick={closeMenu}>Home</a>
                         </li>
                         <li className="nav__item">
-                            <a 
-                                href="#about" 
-                                className={`nav__link ${activeIndex === 1 ? 'active' : ''}`} 
-                                onClick={() => handleMenuItemClick(1)}
-                            >
-                                About
-                            </a>
+                            <a href="#about" className="nav__link" onClick={closeMenu}>About</a>
                         </li>
                         <li className="nav__item">
-                            <a 
-                                href="#skills" 
-                                className={`nav__link ${activeIndex === 2 ? 'active' : ''}`} 
-                                onClick={() => handleMenuItemClick(2)}
-                            >
-                                Skills
-                            </a>
+                            <a href="#skills" className="nav__link" onClick={closeMenu}>Skills</a>
                         </li>
                         <li className="nav__item">
-                            <a 
-                                href="#work" 
-                                className={`nav__link ${activeIndex === 3 ? 'active' : ''}`} 
-                                onClick={() => handleMenuItemClick(3)}
-                            >
-                                Projects
-                            </a>
+                            <a href="#work" className="nav__link" onClick={closeMenu}>Work</a>
                         </li>
                         <li className="nav__item">
-                            <a 
-                                href="#contact" 
-                                className={`nav__link ${activeIndex === 4 ? 'active' : ''}`} 
-                                onClick={() => handleMenuItemClick(4)}
-                            >
-                                Contact
-                            </a>
+                            <a href="#contact" className="nav__link" onClick={closeMenu}>Contact</a>
                         </li>
                         <li className="nav__item">
-                            <a 
-                                href={resumeLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="nav__link nav__link--highlight"
-                            >
-                                <i className="bx bx-download"></i> CV
+                            <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="nav__link nav__link--highlight">
+                                Curriculum Vitae
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div className="nav__toggle" id="nav-toggle" onClick={() => setShowMenu(showMenu === "nav__menu" ? "nav__menu show" : "nav__menu")}>
+                <div className="nav__toggle" id="nav-toggle" onClick={() => setShowMenu(!showMenu)} aria-label="Toggle Navigation">
                     <i className="bx bx-menu"></i>
                 </div>
             </nav>
-            <ToastContainer />
         </header>
     );
 };

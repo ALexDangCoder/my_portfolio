@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { Toaster, toast } from 'react-hot-toast';
-import sr from '../../utils/scrollReveal';
 import db from "../../utils/firebase";
 import "./contact.styles.css";
 
@@ -12,24 +10,18 @@ const Contact = () => {
         content: ""
     });
     const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        sr.reveal('.contact__title', {});
-        sr.reveal('.contact__subtitle', { delay: 200 });
-        sr.reveal('.contact__input', { delay: 400 });
-        sr.reveal('.contact__button', { interval: 200 });
-        console.log("Contact");
-    }, []);
+    const [statusMessage, setStatusMessage] = useState(null);
 
     const sendEmailAndSaveToDB = (e) => {
         e.preventDefault();
 
         if (!message.name || !message.email || !message.content) {
-            toast.error("Name, email, and message content cannot be empty!");
+            setStatusMessage({ type: "error", text: "Name, email, and message content cannot be empty." });
             return;
         }
 
         setLoading(true);
+        setStatusMessage(null);
 
         const templateParams = {
             from_name: message.name,
@@ -38,12 +30,10 @@ const Contact = () => {
             to_name: "Alex Dang",
         };
 
-        // Send email with EmailJS
         emailjs.send('alex-dang_my_portfolio', 'template_alex-portfolio', templateParams, 'bpHV1ByfBuWaoZQS7')
-            .then((response) => {
-                toast.success("Message has been submitted and email sent!");
+            .then(() => {
+                setStatusMessage({ type: "success", text: "Message delivered successfully." });
 
-                // Save to Firestore with document ID as message.name
                 db.collection("contacts").doc(message.name).set({
                     name: message.name,
                     email: message.email,
@@ -56,75 +46,109 @@ const Contact = () => {
                         content: ""
                     });
                     setLoading(false);
-                }).catch(err => {
-                    toast.error("Failed to save message to database: " + err.message);
+                }).catch(() => {
                     setLoading(false);
                 });
-
             }, (err) => {
-                toast.error("Failed to send email: " + err.text);
+                setStatusMessage({ type: "error", text: "Failed to deliver message: " + (err.text || "network error") });
                 setLoading(false);
             });
     };
 
     return (
-        <section className="contact section" id="contact">
-            <h2 className="section-title">Contact</h2>
-            <div className="contact__container bd-grid">
-                <div>
-                    <div className="contact__information">
-                        <i className='bx bx-phone contact__icon'></i>
-                        <div>
-                            <h3 className="contact__title">Call Me</h3>
-                            <span className="contact__subtitle">+84 378-507-421</span>
+        <section className="contact" id="contact">
+            <div className="bd-grid">
+                <h2 className="contact__headline" data-reveal>Direct Contact</h2>
+                <p className="contact__intro" data-reveal>
+                    Open to technical leadership roles, engineering consultancy, and high-impact mobile projects.
+                </p>
+
+                <div className="contact__container">
+                    <div className="contact__channels" data-reveal>
+                        <div className="contact__channel-item" data-reveal>
+                            <span className="contact__channel-label">Email</span>
+                            <span className="contact__channel-value">
+                                <a href="mailto:AlexDangDev@gmail.com">AlexDangDev@gmail.com</a>
+                            </span>
+                        </div>
+
+                        <div className="contact__channel-item" data-reveal>
+                            <span className="contact__channel-label">Phone</span>
+                            <span className="contact__channel-value">
+                                <a href="tel:+84378507421">+84 378 507 421</a>
+                            </span>
+                        </div>
+
+                        <div className="contact__channel-item" data-reveal>
+                            <span className="contact__channel-label">Location</span>
+                            <span className="contact__channel-value">
+                                Hanoi City, Vietnam
+                            </span>
+                        </div>
+
+                        <div className="contact__channel-item" data-reveal>
+                            <span className="contact__channel-label">LinkedIn</span>
+                            <span className="contact__channel-value">
+                                <a href="https://www.linkedin.com/in/alexdang2000/" target="_blank" rel="noopener noreferrer">
+                                    linkedin.com/in/alexdang2000
+                                </a>
+                            </span>
                         </div>
                     </div>
-                    <div className="contact__information">
-                        <i className='bx bx-envelope contact__icon' ></i>
-                        <div>
-                            <h3 className="contact__title">E-mail</h3>
-                            <span className="contact__subtitle">AlexDangDev@gmail.com</span>
+
+                    <form className="contact__form" onSubmit={sendEmailAndSaveToDB} data-reveal>
+                        <div className="contact__field">
+                            <label htmlFor="contact-name" className="contact__label">Your Name</label>
+                            <input 
+                                id="contact-name"
+                                type="text" 
+                                className="contact__input" 
+                                value={message.name} 
+                                onChange={e => setMessage({ ...message, name: e.target.value })} 
+                                required
+                            />
                         </div>
-                    </div>
-                    <div className="contact__information">
-                        <i className='bx bx-map contact__icon' ></i>
-                        <div>
-                            <h3 className="contact__title">Location</h3>
-                            <span className="contact__subtitle">Hanoi City, Vietnam</span>
+
+                        <div className="contact__field">
+                            <label htmlFor="contact-email" className="contact__label">Your Email Address</label>
+                            <input 
+                                id="contact-email"
+                                type="email" 
+                                className="contact__input" 
+                                value={message.email} 
+                                onChange={e => setMessage({ ...message, email: e.target.value })} 
+                                required
+                            />
                         </div>
-                    </div>
-                </div>
-                <form className="contact__form" onSubmit={sendEmailAndSaveToDB}>
-                    <input 
-                        type="text" 
-                        placeholder="Your name" 
-                        className="contact__input" 
-                        value={message.name} 
-                        onChange={e => setMessage({ ...message, name: e.target.value })} 
-                    />
-                    <input 
-                        type="email" 
-                        placeholder="Your Email" 
-                        className="contact__input" 
-                        value={message.email} 
-                        onChange={e => setMessage({ ...message, email: e.target.value })} 
-                    />
-                    <textarea 
-                        cols="0" 
-                        rows="10" 
-                        className="contact__input" 
-                        placeholder='Tell me here'
-                        value={message.content} 
-                        onChange={e => setMessage({ ...message, content: e.target.value })} 
-                    />
-                    <div className="contact__button__container">
-                        <button type="submit" className="contact__button button" disabled={loading}>
-                            {loading ? 'Sending...' : 'Send'}
+
+                        <div className="contact__field">
+                            <label htmlFor="contact-content" className="contact__label">Project or Inquiry Details</label>
+                            <textarea 
+                                id="contact-content"
+                                rows="5" 
+                                className="contact__input" 
+                                value={message.content} 
+                                onChange={e => setMessage({ ...message, content: e.target.value })} 
+                                required
+                            />
+                        </div>
+
+                        {statusMessage && (
+                            <p style={{ 
+                                fontSize: 'var(--step-small)', 
+                                fontWeight: 600, 
+                                color: statusMessage.type === 'success' ? '#16a34a' : '#dc2626' 
+                            }}>
+                                {statusMessage.text}
+                            </p>
+                        )}
+
+                        <button type="submit" className="button button--dark contact__submit-btn" disabled={loading}>
+                            {loading ? 'Submitting...' : 'Send Message'}
                         </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-            <Toaster />
         </section>
     );
 };

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
-import sr from '../../utils/scrollReveal';
 
-// hype mobile images
+// HypeSociety Mobile Images
 import HypeApp1 from '../../assets/projects/7845DB0F-E14E-48E4-86F3-758433CCF3C4.png';
 import HypeApp2 from '../../assets/projects/FILTER_IF.png';
 import HypeApp3 from '../../assets/projects/IF_blocked.png';
@@ -12,19 +11,19 @@ import HypeApp6 from '../../assets/projects/if_04_what todo with link.png';
 import HypeApp7 from '../../assets/projects/tiktok Scan.png';
 import HypeApp8 from '../../assets/projects/tiktok_overview_short.png';
 
-// hype web images
+// HypeSociety Web Images
 import HypeWeb1 from '../../assets/projects/Influencer_profile.png';
 import HypeWeb2 from '../../assets/projects/login.png';
 import HypeWeb3 from '../../assets/projects/Campaigns.png';
 import HypeWeb4 from '../../assets/projects/Choose_Influnecers.png';
 
-// Lumi mobile AI images
+// Lumi Smart Home Images
 import Lumi1 from '../../assets/projects/unnamed.webp';
 import Lumi2 from '../../assets/projects/unnamed1.webp';
 import Lumi3 from '../../assets/projects/unnamed2.webp';
 import Lumi4 from '../../assets/projects/unnamed3.webp';
 
-// CCVC Government images
+// CCVC Government Images
 import CCVC1 from '../../assets/projects/ccvc/login_ccvc.png';
 import CCVC2 from '../../assets/projects/ccvc/day_meet.png';
 import CCVC3 from '../../assets/projects/ccvc/day_list_meet.png';
@@ -38,11 +37,6 @@ const Projects = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    useEffect(() => {
-        sr.reveal('.work__project-block', { interval: 150 });
-        sr.reveal('.work__os-card', { interval: 150 });
-    }, []);
-
     const openModal = (imgSrc) => {
         setSelectedImage(imgSrc);
         setModalIsOpen(true);
@@ -54,47 +48,44 @@ const Projects = () => {
     };
 
     return (
-        <section className="work section" id="work">
-            <h2 className="section-title">Featured Projects</h2>
-            <p className="work__section-desc">
-                A selection of high-impact enterprise mobile applications, government digital transformation systems, and open-source architectures.
-            </p>
-
+        <section className="work" id="work">
             <div className="bd-grid">
+                <h2 className="work__headline" data-reveal>Selected Projects</h2>
+                <p className="work__intro" data-reveal>
+                    Commercial production applications, government software, and open-source systems.
+                </p>
 
                 {/* 1. HypeSociety */}
-                <div className="work__project-block">
+                <div className="work__project-block" data-reveal>
                     <div className="work__project-header">
                         <div className="work__project-title-group">
-                            <h3 className="work__project-title">HypeSociety Influencer Marketing Platform</h3>
+                            <h3 className="work__project-title">HypeSociety Platform</h3>
                             <div className="work__project-meta">
-                                <span className="work__badge">Role: Flutter Tech Lead</span>
-                                <span className="work__badge work__badge--purple">Team: 6 Members</span>
-                                <span className="work__badge">Mobile • Desktop MacOS • Web</span>
+                                <span className="work__meta-tag">Flutter Tech Lead</span>
+                                <span className="work__meta-tag">Mobile • Web • macOS</span>
                             </div>
                         </div>
-                        <div className="work__links">
-                            <a href="https://apps.apple.com/us/app/hypesociety-hire-influencer/id6447349072" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--apple">
-                                <i className="bx bxl-apple"></i> App Store
+                        <div className="work__links-row">
+                            <a href="https://apps.apple.com/us/app/hypesociety-hire-influencer/id6447349072" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                App Store
                             </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.hypesociety.app" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--google">
-                                <i className="bx bxl-play-store"></i> Google Play
+                            <a href="https://play.google.com/store/apps/details?id=com.hypesociety.app" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Google Play
                             </a>
                         </div>
                     </div>
                     <p className="work__project-desc">
-                        Built the foundational Clean Architecture base for an influencer marketplace matching advertisers with creators. Integrated Instagram and TikTok APIs for real-time engagement analytics, campaign tracking, and automated payout systems. Delivered 100% pixel-perfect UI across iOS, Android, and macOS Admin.
+                        Built the foundational Clean Architecture base for an influencer marketplace matching advertisers with digital creators. Integrated Instagram and TikTok APIs for real-time engagement analytics, campaign tracking, and automated payout systems.
                     </p>
-                    <div className="work__tags">
-                        <span className="work__tag">Flutter</span>
-                        <span className="work__tag">Clean Architecture</span>
-                        <span className="work__tag">BLoC / Provider</span>
-                        <span className="work__tag">TikTok & IG Graph API</span>
-                        <span className="work__tag">Flutter Web</span>
-                        <span className="work__tag">MacOS Admin</span>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Flutter</span>
+                        <span className="work__tag-item">Clean Architecture</span>
+                        <span className="work__tag-item">BLoC / Provider</span>
+                        <span className="work__tag-item">TikTok &amp; IG Graph API</span>
+                        <span className="work__tag-item">Flutter Web</span>
                     </div>
 
-                    <h4 style={{ margin: '1rem 0 0.5rem', color: '#374151', fontSize: '0.95rem' }}>Mobile App Screenshots</h4>
+                    <h4 className="work__gallery-title">Mobile Interface Frames</h4>
                     <div className="work__container">
                         <div className="work__img" onClick={() => openModal(HypeApp1)}><img src={HypeApp1} alt="HypeSociety screen 1" /></div>
                         <div className="work__img" onClick={() => openModal(HypeApp2)}><img src={HypeApp2} alt="HypeSociety screen 2" /></div>
@@ -106,7 +97,7 @@ const Projects = () => {
                         <div className="work__img" onClick={() => openModal(HypeApp8)}><img src={HypeApp8} alt="HypeSociety screen 8" /></div>
                     </div>
 
-                    <h4 style={{ margin: '1.5rem 0 0.5rem', color: '#374151', fontSize: '0.95rem' }}>Advertiser Web Dashboard (Flutter Web)</h4>
+                    <h4 className="work__gallery-title">Advertiser Web Workspace</h4>
                     <div className="work__container_web2">
                         <div className="work__img" onClick={() => openModal(HypeWeb1)}><img src={HypeWeb1} alt="HypeSociety web 1" /></div>
                         <div className="work__img" onClick={() => openModal(HypeWeb2)}><img src={HypeWeb2} alt="HypeSociety web 2" /></div>
@@ -115,39 +106,37 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* 2. CCVC - Document Management App For Government */}
-                <div className="work__project-block">
+                {/* 2. CCVC Government */}
+                <div className="work__project-block" data-reveal>
                     <div className="work__project-header">
                         <div className="work__project-title-group">
-                            <h3 className="work__project-title">Government Document Management (CCVC)</h3>
+                            <h3 className="work__project-title">Government CCVC System</h3>
                             <div className="work__project-meta">
-                                <span className="work__badge">Ministry of Planning &amp; Investment (MPI)</span>
-                                <span className="work__badge work__badge--green">Role: Core Mobile Developer</span>
-                                <span className="work__badge">Phone &amp; Tablet</span>
+                                <span className="work__meta-tag">Ministry of Planning &amp; Investment</span>
+                                <span className="work__meta-tag">Phone &amp; Tablet</span>
                             </div>
                         </div>
-                        <div className="work__links">
-                            <a href="https://apps.apple.com/us/app/empi-vietnam/id1524442944" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--apple">
-                                <i className="bx bxl-apple"></i> App Store
+                        <div className="work__links-row">
+                            <a href="https://apps.apple.com/us/app/empi-vietnam/id1524442944" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                App Store
                             </a>
-                            <a href="https://play.google.com/store/apps/details?id=mpi.gov.vn" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--google">
-                                <i className="bx bxl-play-store"></i> Google Play
+                            <a href="https://play.google.com/store/apps/details?id=mpi.gov.vn" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Google Play
                             </a>
-                            <a href="https://www.figma.com/proto/ZTFnE0whWcUfyysIbJKuNo/%5BCCVC%5D-APP_B%E1%BB%99-K%E1%BA%BF-ho%E1%BA%A1ch-v%C3%A0-%C4%90%E1%BA%A7u-t%C6%B0_v2.0.1?node-id=2023-39465&starting-point-node-id=2023%3A39465" target="_blank" rel="noopener noreferrer" className="work__link-btn">
-                                <i className="bx bxl-figma"></i> Figma Prototype
+                            <a href="https://www.figma.com/proto/ZTFnE0whWcUfyysIbJKuNo/%5BCCVC%5D-APP_B%E1%BB%99-K%E1%BA%BF-ho%E1%BA%A1ch-v%C3%A0-%C4%90%E1%BA%A7u-t%C6%B0_v2.0.1?node-id=2023-39465&starting-point-node-id=2023%3A39465" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Figma Prototype
                             </a>
                         </div>
                     </div>
                     <p className="work__project-desc">
-                        Enterprise digital transformation solution for government officials to track ministerial decrees, draft documents, manage tasks, and conduct paperless meetings. Engineered biometric security (Fingerprint / FaceID), Smart OTP integration, text-to-speech meeting synthesizers, and real-time offline document caches.
+                        Digital governance solution for ministerial decree processing, official task assignment, and paperless council meetings. Engineered biometric security, Smart OTP integration, text-to-speech synthesizers, and encrypted offline document caches.
                     </p>
-                    <div className="work__tags">
-                        <span className="work__tag">Flutter</span>
-                        <span className="work__tag">MVVM Clean Architecture</span>
-                        <span className="work__tag">Biometric Auth</span>
-                        <span className="work__tag">Smart OTP</span>
-                        <span className="work__tag">Text-to-Speech</span>
-                        <span className="work__tag">Offline Cache</span>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Flutter</span>
+                        <span className="work__tag-item">MVVM Clean Architecture</span>
+                        <span className="work__tag-item">Biometric Auth</span>
+                        <span className="work__tag-item">Smart OTP</span>
+                        <span className="work__tag-item">Text-to-Speech</span>
                     </div>
 
                     <div className="work__container">
@@ -158,25 +147,25 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* 3. Lumi Smart IoT & Computer Vision */}
-                <div className="work__project-block">
+                {/* 3. Lumi Smart Home */}
+                <div className="work__project-block" data-reveal>
                     <div className="work__project-header">
                         <div className="work__project-title-group">
-                            <h3 className="work__project-title">Lumi Smart Home &amp; AI Camera</h3>
+                            <h3 className="work__project-title">Lumi Smart Home</h3>
                             <div className="work__project-meta">
-                                <span className="work__badge">Smart IoT &amp; AI</span>
-                                <span className="work__badge work__badge--purple">Role: Flutter Engineer</span>
+                                <span className="work__meta-tag">IoT Controller</span>
+                                <span className="work__meta-tag">Core Flutter Engineer</span>
                             </div>
                         </div>
                     </div>
                     <p className="work__project-desc">
-                        Cross-platform mobile controller for smart home automation and AI-powered security cameras. Implemented real-time WebSockets event streaming, low-latency live camera view, scenario automation triggers, and smooth device status synchronization.
+                        Cross-platform mobile controller for smart home automation and AI security cameras. Implemented real-time WebSockets event streaming, low-latency live camera view, scenario automation triggers, and smooth device status synchronization.
                     </p>
-                    <div className="work__tags">
-                        <span className="work__tag">Flutter</span>
-                        <span className="work__tag">IoT / WebSockets</span>
-                        <span className="work__tag">Live Video Stream</span>
-                        <span className="work__tag">BLoC State</span>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Flutter</span>
+                        <span className="work__tag-item">WebSockets</span>
+                        <span className="work__tag-item">Live Video Stream</span>
+                        <span className="work__tag-item">BLoC State</span>
                     </div>
 
                     <div className="work__container">
@@ -187,165 +176,86 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* 4. Open-Source & Enterprise Engineering Showcases */}
-                <h3 style={{ fontSize: '1.6rem', margin: '2rem 0 1rem', color: '#111827', textAlign: 'left' }}>
-                    🚀 Open Source &amp; Architecture Showcases
-                </h3>
+                {/* 4. Open-Source Codebases */}
+                <div className="work__os-section" data-reveal>
+                    <h3 className="work__os-headline">Open Source Codebases</h3>
+                    <div className="work__os-list">
 
-                <div className="work__opensource-grid">
-                    
-                    <div className="work__os-card">
-                        <div>
-                            <h4 className="work__os-title">
-                                <i className="bx bxl-flutter" style={{ color: '#02569B' }}></i>
-                                mineral_management
-                            </h4>
-                            <p className="work__os-desc">
-                                Enterprise Mining Resource Management mobile application built with Flutter, Clean Architecture, BLoC/Cubit, Google Maps integration, and real-time alert notifications.
-                            </p>
-                            <div className="work__tags">
-                                <span className="work__tag">Flutter</span>
-                                <span className="work__tag">BLoC/Cubit</span>
-                                <span className="work__tag">Google Maps</span>
-                                <span className="work__tag">Clean Arch</span>
+                        <div className="work__os-row" data-reveal>
+                            <div className="work__os-info">
+                                <span className="work__os-name">mineral_management</span>
+                                <p className="work__os-desc">
+                                    Enterprise Mining Resource Management mobile application built with Flutter, Clean Architecture, BLoC/Cubit, Google Maps integration, and real-time alert notifications.
+                                </p>
                             </div>
-                        </div>
-                        <div className="work__links" style={{ margin: '1rem 0 0' }}>
-                            <a href="https://github.com/ALexDangCoder/mineral_management" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--github">
-                                <i className="bx bxl-github"></i> View GitHub Repo
+                            <a href="https://github.com/ALexDangCoder/mineral_management" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                Repository
                             </a>
                         </div>
-                    </div>
 
-                    <div className="work__os-card">
-                        <div>
-                            <h4 className="work__os-title">
-                                <i className="bx bx-chip" style={{ color: '#10B981' }}></i>
-                                demo_scan_body_FlutterWithMediaPipe
-                            </h4>
-                            <p className="work__os-desc">
-                                Real-time on-device AI computer vision project utilizing Google MediaPipe inside Flutter for live body pose estimation, face mesh landmarks, and hand tracking.
-                            </p>
-                            <div className="work__tags">
-                                <span className="work__tag">MediaPipe</span>
-                                <span className="work__tag">Computer Vision</span>
-                                <span className="work__tag">Pose Estimation</span>
-                                <span className="work__tag">Flutter</span>
+                        <div className="work__os-row" data-reveal>
+                            <div className="work__os-info">
+                                <span className="work__os-name">demo_scan_body_FlutterWithMediaPipe</span>
+                                <p className="work__os-desc">
+                                    Real-time on-device AI computer vision project utilizing Google MediaPipe inside Flutter for live body pose estimation, face mesh landmarks, and hand tracking.
+                                </p>
                             </div>
-                        </div>
-                        <div className="work__links" style={{ margin: '1rem 0 0' }}>
-                            <a href="https://github.com/ALexDangCoder/demo_scan_body_FlutterWithMediaPipe" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--github">
-                                <i className="bx bxl-github"></i> View GitHub Repo
+                            <a href="https://github.com/ALexDangCoder/demo_scan_body_FlutterWithMediaPipe" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                Repository
                             </a>
                         </div>
-                    </div>
 
-                    <div className="work__os-card">
-                        <div>
-                            <h4 className="work__os-title">
-                                <i className="bx bx-layer" style={{ color: '#4070F4' }}></i>
-                                flutter_base_bloc_cubit_syn
-                            </h4>
-                            <p className="work__os-desc">
-                                Modern production-ready Flutter 3.35+ starter architecture boilerplate with complete separation of concerns, BLoC &amp; Cubit, FVM version pinning, and CI/CD pipelines.
-                            </p>
-                            <div className="work__tags">
-                                <span className="work__tag">Flutter 3.35+</span>
-                                <span className="work__tag">Boilerplate</span>
-                                <span className="work__tag">BLoC/Cubit</span>
-                                <span className="work__tag">FVM</span>
+                        <div className="work__os-row" data-reveal>
+                            <div className="work__os-info">
+                                <span className="work__os-name">flutter_base_bloc_cubit_syn</span>
+                                <p className="work__os-desc">
+                                    Modern production-ready Flutter 3.35+ starter architecture boilerplate with complete separation of concerns, BLoC &amp; Cubit, FVM version pinning, and CI/CD pipelines.
+                                </p>
                             </div>
-                        </div>
-                        <div className="work__links" style={{ margin: '1rem 0 0' }}>
-                            <a href="https://github.com/ALexDangCoder/flutter_base_bloc_cubit_syn" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--github">
-                                <i className="bx bxl-github"></i> View GitHub Repo
+                            <a href="https://github.com/ALexDangCoder/flutter_base_bloc_cubit_syn" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                Repository
                             </a>
                         </div>
-                    </div>
 
-                    <div className="work__os-card">
-                        <div>
-                            <h4 className="work__os-title">
-                                <i className="bx bx-wallet" style={{ color: '#F59E0B' }}></i>
-                                flutter-crypto-trading-wallet
-                            </h4>
-                            <p className="work__os-desc">
-                                Complete cryptocurrency trading and crypto wallet UI Kit for Flutter with responsive modern dark mode, token charts, transaction flows, and smooth micro-animations.
-                            </p>
-                            <div className="work__tags">
-                                <span className="work__tag">Flutter</span>
-                                <span className="work__tag">Crypto Wallet</span>
-                                <span className="work__tag">Trading UI</span>
-                                <span className="work__tag">Dart</span>
+                        <div className="work__os-row" data-reveal>
+                            <div className="work__os-info">
+                                <span className="work__os-name">flutter-crypto-trading-wallet</span>
+                                <p className="work__os-desc">
+                                    Complete cryptocurrency trading and crypto wallet UI Kit for Flutter with responsive modern dark mode, token charts, transaction flows, and smooth micro-animations.
+                                </p>
                             </div>
-                        </div>
-                        <div className="work__links" style={{ margin: '1rem 0 0' }}>
-                            <a href="https://github.com/ALexDangCoder/flutter-crypto-trading-wallet" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--github">
-                                <i className="bx bxl-github"></i> View GitHub Repo
+                            <a href="https://github.com/ALexDangCoder/flutter-crypto-trading-wallet" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                Repository
                             </a>
                         </div>
-                    </div>
 
-                    <div className="work__os-card">
-                        <div>
-                            <h4 className="work__os-title">
-                                <i className="bx bxl-react" style={{ color: '#61DAFB' }}></i>
-                                ytfsoft_landing_page
-                            </h4>
-                            <p className="work__os-desc">
-                                Official responsive landing page for YTF Soft built with React, Vite, Tailwind CSS, and dynamic headless CMS integration using Google Sheets API.
-                            </p>
-                            <div className="work__tags">
-                                <span className="work__tag">React</span>
-                                <span className="work__tag">Vite</span>
-                                <span className="work__tag">Tailwind CSS</span>
-                                <span className="work__tag">Sheets API</span>
+                        <div className="work__os-row" data-reveal>
+                            <div className="work__os-info">
+                                <span className="work__os-name">ytfsoft_landing_page</span>
+                                <p className="work__os-desc">
+                                    Official responsive landing page for YTF Soft built with React, Vite, Tailwind CSS, and dynamic headless CMS integration using Google Sheets API.
+                                </p>
                             </div>
-                        </div>
-                        <div className="work__links" style={{ margin: '1rem 0 0' }}>
-                            <a href="https://github.com/ALexDangCoder/ytfsoft_landing_page" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--github">
-                                <i className="bx bxl-github"></i> View GitHub Repo
+                            <a href="https://github.com/ALexDangCoder/ytfsoft_landing_page" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                Repository
                             </a>
                         </div>
-                    </div>
 
-                    <div className="work__os-card">
-                        <div>
-                            <h4 className="work__os-title">
-                                <i className="bx bxl-apple" style={{ color: '#000000' }}></i>
-                                Viettel Money &amp; Điện Máy Hòa Phát
-                            </h4>
-                            <p className="work__os-desc">
-                                Commercial production applications serving millions of users across Vietnam. Viettel Money (iOS Developer - Swift/RxSwift) and Điện Máy Hòa Phát (Flutter Tech Lead - Clean Architecture).
-                            </p>
-                            <div className="work__tags">
-                                <span className="work__tag">Viettel Money</span>
-                                <span className="work__tag">Hòa Phát</span>
-                                <span className="work__tag">Swift / iOS</span>
-                                <span className="work__tag">Flutter Lead</span>
-                            </div>
-                        </div>
-                        <div className="work__links" style={{ margin: '1rem 0 0' }}>
-                            <a href="https://apps.apple.com/vn/app/viettel-money/id1344204781" target="_blank" rel="noopener noreferrer" className="work__link-btn work__link-btn--apple">
-                                <i className="bx bxl-apple"></i> Viettel Money iOS
-                            </a>
-                        </div>
                     </div>
-
                 </div>
 
             </div>
 
-            {/* Modal preview */}
+            {/* Modal */}
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                contentLabel="Project Screenshot Preview"
+                contentLabel="Screenshot Zoom"
                 className="Modal"
                 overlayClassName="Overlay"
             >
                 <div className="modal-content">
-                    <img src={selectedImage} alt="Selected project" className="modal-img" />
+                    <img src={selectedImage} alt="Enlarged screenshot" className="modal-img" />
                     <button onClick={closeModal} className="close-button">Close Preview</button>
                 </div>
             </Modal>

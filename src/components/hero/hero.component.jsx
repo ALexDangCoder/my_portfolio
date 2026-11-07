@@ -1,52 +1,51 @@
-import React, { useEffect } from 'react';
-import sr from '../../utils/scrollReveal';
-import { ReactComponent as Avatar } from "../../assets/img/mf-avatar.svg";
+import React from 'react';
 import "./hero.styles.css";
 
 const Hero = () => {
-    useEffect(() => {
-        sr.reveal('.home__title', {}); 
-        sr.reveal('.home__subtitle', { delay: 150 }); 
-        sr.reveal('.home__buttons', { delay: 250 }); 
-        sr.reveal('.home__img', { delay: 400 }); 
-        sr.reveal('.home__social-icon', { interval: 150 }); 
-    }, []);
+    const portraitUrl = "https://avatars.githubusercontent.com/u/94129871?s=400&u=2ecb4d2c2a87f8c50db7df2dabcb9fd4144422ee&v=4";
 
     return (
         <section className="home bd-grid" id="home">
-            <div className="home__profile bd-grid">
-                <div className="home__img">
-                    <Avatar />
-                </div>
-                <div className="home__social">
-                    <a href="https://www.linkedin.com/in/alexdang2000/" target="_blank" rel="noopener noreferrer" className="home__social-icon" title="LinkedIn">
-                        <i className="bx bxl-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/ALexDangCoder" target="_blank" rel="noopener noreferrer" className="home__social-icon" title="GitHub">
-                        <i className="bx bxl-github"></i>
-                    </a>
-                    <a href="mailto:AlexDangDev@gmail.com" className="home__social-icon" title="Email">
-                        <i className="bx bx-envelope"></i>
-                    </a>
-                    <a href="https://www.facebook.com/DevAlex0111" target="_blank" rel="noopener noreferrer" className="home__social-icon" title="Facebook">
-                        <i className="bx bxl-facebook"></i>
-                    </a>
-                </div>
-            </div>
-            <div className="home__data">
-                <span className="home__greeting">👋 Welcome to my portfolio</span>
-                <h1 className="home__title">
-                    Hi, I'm <span className="home__title-color">Alex Dang</span>
-                    <br />
-                    Senior Mobile Engineer
+            <div className="home__grid">
+                
+                <h1 className="home__monument">
+                    ALEX DANG
                 </h1>
-                <p className="home__subtitle">
-                    Flutter Tech Lead &amp; iOS Specialist with <strong>6+ years</strong> building production-grade mobile applications, scalable architectures, and on-device AI.
-                </p>
-                <div className="home__buttons">
-                    <a href="#work" className="button">View Projects</a>
-                    <a href="#contact" className="button button--ghost">Contact Me</a>
+
+                <div className="home__content-split">
+                    <div className="home__statement-group">
+                        <p className="home__statement">
+                            Senior Mobile Engineer and Tech Lead. Architecting production Flutter and iOS native applications serving millions of users.
+                        </p>
+                        <p className="home__subtext">
+                            Six years of engineering leadership across high-scale fintech (Viettel Money), nationwide enterprise warranty networks (Hoa Phat), and government digital transformation systems (MPI Vietnam).
+                        </p>
+                        <div className="home__actions">
+                            <a href="#work" className="button button--dark">
+                                View Selected Work
+                            </a>
+                            <a href="#contact" className="button button--ghost">
+                                Start Conversation
+                            </a>
+                        </div>
+                        <div className="home__socials">
+                            <a href="https://www.linkedin.com/in/alexdang2000/" target="_blank" rel="noopener noreferrer" className="home__social-link">
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/ALexDangCoder" target="_blank" rel="noopener noreferrer" className="home__social-link">
+                                GitHub
+                            </a>
+                            <a href="mailto:AlexDangDev@gmail.com" className="home__social-link">
+                                Email
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="home__visual-frame">
+                        <img src={portraitUrl} alt="Alex Dang portrait" />
+                    </div>
                 </div>
+
             </div>
         </section>
     );
