@@ -64,6 +64,67 @@
   line-height: 1.5;
 }
 
+.about__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about__timeline-title {
+  font-size: var(--step-lead);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.about__timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: transparent;
+}
+
+.about__timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.about__timeline-company {
+  font-size: var(--step-body);
+  font-weight: 800;
+  color: var(--color-ink);
+}
+
+.about__timeline-period {
+  font-size: var(--step-small);
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.about__timeline-role {
+  font-size: var(--step-small);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.about__timeline-desc {
+  font-size: var(--step-small) !important;
+  color: var(--color-muted) !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+
 .about__actions {
   display: flex;
   gap: 1rem;

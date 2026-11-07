@@ -125,21 +125,21 @@ const Skills = () => {
                         <div className="skills__items-table">
                             <div className="skills__row">
                                 <div className="skills__row-head">
-                                    <span className="skills__row-name">React &amp; Modern Web</span>
-                                    <span className="skills__row-level">Proficient</span>
+                                    <span className="skills__row-name">Next.js 16 &amp; React 19</span>
+                                    <span className="skills__row-level">Advanced</span>
                                 </div>
                                 <span className="skills__row-details">
-                                    React 18, Vite, Tailwind CSS, Responsive Web Standards, State Hooks.
+                                    App Router, Server Actions, SSR/SSG, Tailwind CSS, TypeScript, Performance Audits.
                                 </span>
                             </div>
 
                             <div className="skills__row">
                                 <div className="skills__row-head">
-                                    <span className="skills__row-name">TypeScript &amp; Node.js</span>
+                                    <span className="skills__row-name">NestJS &amp; Node.js</span>
                                     <span className="skills__row-level">Advanced</span>
                                 </div>
                                 <span className="skills__row-details">
-                                    Express APIs, Microservices, type-safe data validation, asynchronous I/O.
+                                    Enterprise REST APIs, Prisma 5 ORM, PostgreSQL, Sentry tracking, JWT security.
                                 </span>
                             </div>
 
@@ -149,17 +149,17 @@ const Skills = () => {
                                     <span className="skills__row-level">Proficient</span>
                                 </div>
                                 <span className="skills__row-details">
-                                    High-concurrency services, Telegram Bot webhooks, automated data scrapers.
+                                    High-concurrency services, FIS SignHub digital signing, GORM, database migrations.
                                 </span>
                             </div>
 
                             <div className="skills__row">
                                 <div className="skills__row-head">
-                                    <span className="skills__row-name">Python</span>
-                                    <span className="skills__row-level">Practical</span>
+                                    <span className="skills__row-name">Real-Time &amp; AI Streaming</span>
+                                    <span className="skills__row-level">Specialist</span>
                                 </div>
                                 <span className="skills__row-details">
-                                    Data automation scripts, backend utilities, API testing harnesses.
+                                    Server-Sent Events (SSE), WebSockets streaming, voice AI synthesis, MediaPipe models.
                                 </span>
                             </div>
                         </div>

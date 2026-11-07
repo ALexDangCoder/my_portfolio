@@ -12,14 +12,53 @@ const About = () => {
                 <div className="about__grid">
                     <div className="about__narrative" data-reveal>
                         <p>
-                            I am Dang Xuan Tung (Alex), a Senior Mobile Engineer and Tech Lead based in Hanoi, Vietnam. Over the past six years, I have architected and scaled cross-platform mobile systems for enterprise companies, including VMO Holdings and Synodus.
+                            I am Dang Xuan Tung (Alex), a Senior Mobile Engineer and Tech Lead based in Hanoi, Vietnam. Over the past six years, I have architected and scaled cross-platform mobile systems and enterprise digital products, currently leading technical initiatives at KCI Solutions.
                         </p>
                         <p>
-                            My primary specialty is Flutter and Dart, combined with deep native iOS engineering in Swift and Objective-C. I champion Clean Architecture and predictable state machines (BLoC, Cubit, Provider) to build robust codebases that remain maintainable across years of active feature development.
+                            My primary specialty is Flutter and Dart, combined with deep native iOS engineering in Swift and Objective-C, along with modern fullstack architectures across Next.js, Go microservices, and NestJS. I champion Clean Architecture and predictable state machines (BLoC, Cubit, Provider) to build robust codebases that remain maintainable across years of active feature development.
                         </p>
                         <p>
-                            In production, I have led engineering teams delivering solutions at national scale: from Viettel Money's iOS payment ecosystem and Hoa Phat's nationwide retail warranty infrastructure, to biometric paperless governance systems for Vietnam's Ministry of Planning and Investment.
+                            In production, I have led engineering teams delivering solutions at national scale: from Vietnam Data Exchange (VNDT) and Viettel Money's iOS payment ecosystem, to Hoa Phat's nationwide retail warranty infrastructure and paperless governance systems for Vietnam's Ministry of Planning and Investment.
                         </p>
+
+                        <div className="about__timeline">
+                            <h3 className="about__timeline-title">Career Milestones</h3>
+                            <div className="about__timeline-list">
+                                <div className="about__timeline-item">
+                                    <div className="about__timeline-header">
+                                        <span className="about__timeline-company">KCI Solutions</span>
+                                        <span className="about__timeline-period">2024 — Present</span>
+                                    </div>
+                                    <span className="about__timeline-role">Technical Lead &amp; Senior Mobile Engineer</span>
+                                    <p className="about__timeline-desc">
+                                        Directing architectural strategy for Vietnam Data Exchange (VNDT), CertEdge Global certification prep ecosystem, KCI Connect mobile app, and Noidi AI.
+                                    </p>
+                                </div>
+
+                                <div className="about__timeline-item">
+                                    <div className="about__timeline-header">
+                                        <span className="about__timeline-company">VMO Holdings</span>
+                                        <span className="about__timeline-period">2023 — 2024</span>
+                                    </div>
+                                    <span className="about__timeline-role">Software Engineer &amp; Mobile Lead</span>
+                                    <p className="about__timeline-desc">
+                                        Led mobile engineering on Viettel Money iOS (Swift/RxSwift), Hoa Phat retail warranty network (Flutter), and HypeSociety cross-platform application.
+                                    </p>
+                                </div>
+
+                                <div className="about__timeline-item">
+                                    <div className="about__timeline-header">
+                                        <span className="about__timeline-company">Synodus</span>
+                                        <span className="about__timeline-period">2020 — 2023</span>
+                                    </div>
+                                    <span className="about__timeline-role">Mobile Developer</span>
+                                    <p className="about__timeline-desc">
+                                        Engineered enterprise Flutter and iOS applications, designed backend API integrations, and built offline-first caching mechanisms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="about__actions">
                             <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="button button--dark">
                                 View Full Curriculum Vitae

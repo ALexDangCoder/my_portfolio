@@ -52,10 +52,81 @@ const Projects = () => {
             <div className="bd-grid">
                 <h2 className="work__headline" data-reveal>Selected Projects</h2>
                 <p className="work__intro" data-reveal>
-                    Commercial production applications, government software, and open-source systems.
+                    Commercial enterprise platforms, government software, and open-source systems.
                 </p>
 
-                {/* 1. HypeSociety */}
+                {/* 1. Vietnam Data Exchange (VNDT) */}
+                <div className="work__project-block" data-reveal>
+                    <div className="work__project-header">
+                        <div className="work__project-title-group">
+                            <h3 className="work__project-title">Vietnam Data Exchange (VNDT)</h3>
+                            <div className="work__project-meta">
+                                <span className="work__meta-tag">Technical Lead</span>
+                                <span className="work__meta-tag">National Enterprise Platform</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="work__project-desc">
+                        Nationwide digital data exchange and digital asset transaction platform. Engineered secure FIS SignHub electronic signing integration, enterprise customer negotiation workflow, real-time product listing operations, and Go microservices backend paired with Next.js web portals and React Native mobile exchange app.
+                    </p>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Next.js</span>
+                        <span className="work__tag-item">Go (Golang)</span>
+                        <span className="work__tag-item">FIS SignHub</span>
+                        <span className="work__tag-item">React Native</span>
+                        <span className="work__tag-item">PostgreSQL</span>
+                        <span className="work__tag-item">Microservices</span>
+                    </div>
+                </div>
+
+                {/* 2. CertEdge Global */}
+                <div className="work__project-block" data-reveal>
+                    <div className="work__project-header">
+                        <div className="work__project-title-group">
+                            <h3 className="work__project-title">CertEdge Global Platform</h3>
+                            <div className="work__project-meta">
+                                <span className="work__meta-tag">Fullstack &amp; Mobile Lead</span>
+                                <span className="work__meta-tag">International EdTech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="work__project-desc">
+                        High-concurrency certification examination platform for international qualifications (PMP, PMI-ACP, Scrum). Architected Next.js 16 learner portal with React 19, NestJS 10 backend microservices, Prisma 5 ORM, VietQR automated payment processing, and Sentry production monitoring.
+                    </p>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Next.js 16</span>
+                        <span className="work__tag-item">React 19</span>
+                        <span className="work__tag-item">NestJS 10</span>
+                        <span className="work__tag-item">Prisma 5</span>
+                        <span className="work__tag-item">PostgreSQL</span>
+                        <span className="work__tag-item">VietQR</span>
+                    </div>
+                </div>
+
+                {/* 3. Noidi AI Language Assistant */}
+                <div className="work__project-block" data-reveal>
+                    <div className="work__project-header">
+                        <div className="work__project-title-group">
+                            <h3 className="work__project-title">Noidi (Wisbi AI Assistant)</h3>
+                            <div className="work__project-meta">
+                                <span className="work__meta-tag">Flutter Lead</span>
+                                <span className="work__meta-tag">AI Language Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="work__project-desc">
+                        Interactive AI-powered language tutor mobile application. Implemented low-latency Server-Sent Events (SSE) streaming for real-time AI responses, speech recognition and audio synthesis pipelines, and custom liquid glass UI with BLoC state management.
+                    </p>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Flutter</span>
+                        <span className="work__tag-item">SSE Streaming</span>
+                        <span className="work__tag-item">On-Device AI</span>
+                        <span className="work__tag-item">BLoC / Cubit</span>
+                        <span className="work__tag-item">WebSockets</span>
+                    </div>
+                </div>
+
+                {/* 4. HypeSociety */}
                 <div className="work__project-block" data-reveal>
                     <div className="work__project-header">
                         <div className="work__project-title-group">
