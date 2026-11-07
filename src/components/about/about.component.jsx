@@ -18,7 +18,7 @@ const About = () => {
                             My primary specialty is Flutter and Dart, combined with deep native iOS engineering in Swift and Objective-C, along with modern fullstack architectures across Next.js, Go microservices, and NestJS. I champion Clean Architecture and predictable state machines (BLoC, Cubit, Provider) to build robust codebases that remain maintainable across years of active feature development.
                         </p>
                         <p>
-                            In production, I have led engineering teams delivering solutions at national scale: from Web3 decentralized trading &amp; non-custodial wallets (XBIT) and Vietnam Data Exchange (VNDT), to Viettel Money's iOS payment ecosystem and paperless governance systems for Vietnam's Ministry of Planning and Investment.
+                            In production, I have led engineering teams delivering solutions at national scale: from licensed fintech platforms (9Pay E-Wallet &amp; Loa TingTing Soundbox) and Web3 decentralized trading (XBIT), to Viettel Money's iOS payment ecosystem, Vietnam Data Exchange (VNDT), and paperless governance for Vietnam's Ministry of Planning and Investment.
                         </p>
 
                         <div className="about__timeline">
@@ -32,6 +32,17 @@ const About = () => {
                                     <span className="about__timeline-role">Technical Lead &amp; Senior Mobile Engineer</span>
                                     <p className="about__timeline-desc">
                                         Directing architectural strategy for Web3 trading platform XBIT, Vietnam Data Exchange (VNDT), CertEdge Global certification prep ecosystem, KCI Connect, and Noidi AI.
+                                    </p>
+                                </div>
+
+                                <div className="about__timeline-item">
+                                    <div className="about__timeline-header">
+                                        <span className="about__timeline-company">9Pay (Fintech Intermediary)</span>
+                                        <span className="about__timeline-period">2024 — 2025</span>
+                                    </div>
+                                    <span className="about__timeline-role">Senior Mobile Engineer</span>
+                                    <p className="about__timeline-desc">
+                                        Engineered core payment and gamification modules for 9Pay E-Wallet, architected the Loa TingTing merchant companion ecosystem for instant VietQR audio broadcasts, and built the 9Pay BD onboarding app.
                                     </p>
                                 </div>
 

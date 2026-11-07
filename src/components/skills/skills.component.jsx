@@ -84,11 +84,11 @@ const Skills = () => {
 
                             <div className="skills__row">
                                 <div className="skills__row-head">
-                                    <span className="skills__row-name">BLoC, Cubit &amp; Provider</span>
+                                    <span className="skills__row-name">BLoC, Riverpod &amp; Redux</span>
                                     <span className="skills__row-level">Expert</span>
                                 </div>
                                 <span className="skills__row-details">
-                                    Event-driven state management, reactive streams, RxDart, GetX state machines.
+                                    Event-driven architecture, Riverpod 2.6, Redux stores, reactive streams, RxDart, Cubit.
                                 </span>
                             </div>
 

@@ -7,6 +7,15 @@ import Xbit2 from '../../assets/projects/xbit/xbit_2.webp';
 import Xbit3 from '../../assets/projects/xbit/xbit_3.webp';
 import Xbit4 from '../../assets/projects/xbit/xbit_4.webp';
 
+// 9Pay Ecosystem Images
+import TingTing1 from '../../assets/projects/9pay/tingting_1.webp';
+import TingTing2 from '../../assets/projects/9pay/tingting_2.webp';
+import TingTing3 from '../../assets/projects/9pay/tingting_3.webp';
+import TingTing4 from '../../assets/projects/9pay/tingting_4.webp';
+import NinePay1 from '../../assets/projects/9pay/9pay_1.webp';
+import NinePay2 from '../../assets/projects/9pay/9pay_2.webp';
+import NinePay3 from '../../assets/projects/9pay/9pay_3.webp';
+
 // HypeSociety Mobile Images
 import HypeApp1 from '../../assets/projects/7845DB0F-E14E-48E4-86F3-758433CCF3C4.png';
 import HypeApp2 from '../../assets/projects/FILTER_IF.png';
@@ -105,7 +114,95 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* 2. Vietnam Data Exchange (VNDT) */}
+                {/* 2. Loa TingTing — 9Pay Soundbox Platform */}
+                <div className="work__project-block" data-reveal>
+                    <div className="work__project-header">
+                        <div className="work__project-title-group">
+                            <h3 className="work__project-title">Loa TingTing — 9Pay Soundbox Platform</h3>
+                            <div className="work__project-meta">
+                                <span className="work__meta-tag">Senior Mobile Engineer</span>
+                                <span className="work__meta-tag">Fintech • IoT Audio Hardware</span>
+                            </div>
+                        </div>
+                        <div className="work__links-row">
+                            <a href="https://apps.apple.com/vn/app/loa-tingting/id6475139294" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                App Store
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.nine.pay.soundbox.nine_sound_box" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Google Play
+                            </a>
+                            <a href="https://loatingting.vn" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Website
+                            </a>
+                        </div>
+                    </div>
+                    <p className="work__project-desc">
+                        Smart voice announcement speaker device (Soundbox) and merchant companion mobile platform for 9Pay. Engineered instant VietQR transaction audio broadcast triggers, Virtual Account (VA) allocation and device pairing, real-time revenue analytics, Smart OTP-secured merchant withdrawals, and multi-staff cashier role management.
+                    </p>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Flutter</span>
+                        <span className="work__tag-item">Riverpod</span>
+                        <span className="work__tag-item">Freezed</span>
+                        <span className="work__tag-item">Retrofit &amp; Dio</span>
+                        <span className="work__tag-item">Smart OTP</span>
+                        <span className="work__tag-item">IoT Soundbox</span>
+                        <span className="work__tag-item">VietQR</span>
+                        <span className="work__tag-item">Virtual Account</span>
+                    </div>
+
+                    <h4 className="work__gallery-title">Mobile Interface Frames</h4>
+                    <div className="work__container">
+                        <div className="work__img" onClick={() => openModal(TingTing1)}><img src={TingTing1} alt="TingTing screen 1" /></div>
+                        <div className="work__img" onClick={() => openModal(TingTing2)}><img src={TingTing2} alt="TingTing screen 2" /></div>
+                        <div className="work__img" onClick={() => openModal(TingTing3)}><img src={TingTing3} alt="TingTing screen 3" /></div>
+                        <div className="work__img" onClick={() => openModal(TingTing4)}><img src={TingTing4} alt="TingTing screen 4" /></div>
+                    </div>
+                </div>
+
+                {/* 3. Ví điện tử 9Pay (9Pay E-Wallet) */}
+                <div className="work__project-block" data-reveal>
+                    <div className="work__project-header">
+                        <div className="work__project-title-group">
+                            <h3 className="work__project-title">Ví điện tử 9Pay (9Pay E-Wallet)</h3>
+                            <div className="work__project-meta">
+                                <span className="work__meta-tag">Core Mobile Engineer</span>
+                                <span className="work__meta-tag">Licensed Fintech E-Wallet</span>
+                            </div>
+                        </div>
+                        <div className="work__links-row">
+                            <a href="https://apps.apple.com/vn/app/%E1%BB%A9ng-d%E1%BB%A5ng-9pay/id1484320059" target="_blank" rel="noopener noreferrer" className="button button--dark">
+                                App Store
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=vn.ninepay.ewallet" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Google Play
+                            </a>
+                            <a href="https://9pay.vn" target="_blank" rel="noopener noreferrer" className="button button--ghost">
+                                Website
+                            </a>
+                        </div>
+                    </div>
+                    <p className="work__project-desc">
+                        State Bank of Vietnam-licensed national digital wallet serving millions of registered users. Engineered high-throughput money transfer and utility billing pipelines, interactive customer gamification campaigns (Lucky Wheel, Magic Chest, Tết Lucky Money, 9Pay Stories), biometric authentication, and PCI-DSS payment security.
+                    </p>
+                    <div className="work__tags-row">
+                        <span className="work__tag-item">Flutter</span>
+                        <span className="work__tag-item">Redux &amp; Cubit</span>
+                        <span className="work__tag-item">Dio</span>
+                        <span className="work__tag-item">Biometric Security</span>
+                        <span className="work__tag-item">Gamification</span>
+                        <span className="work__tag-item">PCI-DSS</span>
+                        <span className="work__tag-item">Clean Architecture</span>
+                    </div>
+
+                    <h4 className="work__gallery-title">Mobile Interface Frames</h4>
+                    <div className="work__container">
+                        <div className="work__img" onClick={() => openModal(NinePay1)}><img src={NinePay1} alt="9Pay wallet screen 1" /></div>
+                        <div className="work__img" onClick={() => openModal(NinePay2)}><img src={NinePay2} alt="9Pay billing screen 2" /></div>
+                        <div className="work__img" onClick={() => openModal(NinePay3)}><img src={NinePay3} alt="9Pay services screen 3" /></div>
+                    </div>
+                </div>
+
+                {/* 4. Vietnam Data Exchange (VNDT) */}
                 <div className="work__project-block" data-reveal>
                     <div className="work__project-header">
                         <div className="work__project-title-group">
