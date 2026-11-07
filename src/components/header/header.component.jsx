@@ -61,7 +61,7 @@ const Header = () => {
             <nav className="nav bd-grid">
                 <div>
                     <a 
-                        href="#" 
+                        href="#home" 
                         className={`nav__logo ${isLogoHidden ? 'hidden' : ''}`} 
                         onClick={handleLogoClick}
                     >
@@ -99,9 +99,18 @@ const Header = () => {
                         </li>
                         <li className="nav__item">
                             <a 
-                                href="#contact" 
+                                href="#work" 
                                 className={`nav__link ${activeIndex === 3 ? 'active' : ''}`} 
                                 onClick={() => handleMenuItemClick(3)}
+                            >
+                                Projects
+                            </a>
+                        </li>
+                        <li className="nav__item">
+                            <a 
+                                href="#contact" 
+                                className={`nav__link ${activeIndex === 4 ? 'active' : ''}`} 
+                                onClick={() => handleMenuItemClick(4)}
                             >
                                 Contact
                             </a>
@@ -111,9 +120,9 @@ const Header = () => {
                                 href={resumeLink} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className="nav__link"
+                                className="nav__link nav__link--highlight"
                             >
-                                Download CV
+                                <i className="bx bx-download"></i> CV
                             </a>
                         </li>
                     </ul>

@@ -86,6 +86,13 @@ const Contact = () => {
                             <span className="contact__subtitle">AlexDangDev@gmail.com</span>
                         </div>
                     </div>
+                    <div className="contact__information">
+                        <i className='bx bx-map contact__icon' ></i>
+                        <div>
+                            <h3 className="contact__title">Location</h3>
+                            <span className="contact__subtitle">Hanoi City, Vietnam</span>
+                        </div>
+                    </div>
                 </div>
                 <form className="contact__form" onSubmit={sendEmailAndSaveToDB}>
                     <input 

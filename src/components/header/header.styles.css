@@ -95,3 +95,20 @@
     }
 }
 
+.nav__link--highlight {
+    background-color: var(--first-color);
+    color: #fff !important;
+    padding: 0.4rem 0.85rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.nav__link--highlight:hover {
+    opacity: 0.9;
+}
+.nav__link--highlight::after {
+    display: none !important;
+}
+

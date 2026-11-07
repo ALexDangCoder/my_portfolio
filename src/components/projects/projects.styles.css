@@ -1,60 +1,238 @@
 .work {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
+.work__section-desc {
+    max-width: 650px;
+    margin: -1rem auto 2.5rem;
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
+.work__project-block {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    text-align: left;
+}
+
+.work__project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.work__project-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.work__project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.work__project-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.work__badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    background-color: #eff6ff;
+    color: var(--first-color);
+    border: 1px solid #bfdbfe;
+}
+
+.work__badge--green {
+    background-color: #ecfdf5;
+    color: #059669;
+    border-color: #a7f3d0;
+}
+
+.work__badge--purple {
+    background-color: #faf5ff;
+    color: #7c3aed;
+    border-color: #ddd6fe;
+}
+
+.work__project-desc {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.work__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.work__tag {
+    font-size: 0.8rem;
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.35rem;
+    font-weight: 500;
+}
+
+.work__links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.work__link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45rem 0.95rem;
+    border-radius: 0.5rem;
+    background: #111827;
+    color: #ffffff;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.work__link-btn:hover {
+    background: var(--first-color);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.work__link-btn--apple {
+    background: #000000;
+}
+
+.work__link-btn--google {
+    background: #0f9d58;
+}
+
+.work__link-btn--github {
+    background: #24292e;
+}
+
+/* Image grid */
 .work__container {
     display: grid;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 }
 
 .work__container_web2 {
     display: grid;
-    gap: 4rem;
-    padding: 1rem;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
 .work__img {
-    box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
-    border-radius: .5rem;
+    box-shadow: 0 4px 15px rgba(14, 36, 49, 0.08);
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    background: #fafafa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.work__img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(14, 36, 49, 0.15);
 }
 
 .work__img img {
     width: 100%;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.work__img img:hover {
-    transform: scale(1.1);
+.work__img:hover img {
+    transform: scale(1.05);
 }
 
-.work__img:hover {
-    transform: translateY(-10px);
+/* Open source cards */
+.work__opensource-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    text-align: left;
 }
 
-/* Add this to your projects.styles.css */
+.work__os-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.work__os-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--first-color);
+}
+
+.work__os-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.work__os-desc {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Modal */
 .Modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 1.5rem;
+    border-radius: 12px;
     max-width: 90%;
     max-height: 90%;
     overflow: auto;
     z-index: 1000;
+    outline: none;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .Overlay {
@@ -75,44 +253,32 @@
 
 .modal-img {
     max-width: 100%;
-    max-height: 80vh;
+    max-height: 75vh;
+    border-radius: 8px;
     margin-bottom: 1rem;
 }
 
 .close-button {
-    background-color: #333;
+    background-color: #1f2937;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
 }
 
 .close-button:hover {
-    background-color: #555;
+    background-color: var(--first-color);
 }
 
-/*=== Media Queries ===*/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .work__container {
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .work__opensource-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        gap: 2rem;
     }
-}
-
-@media screen and (min-width: 1024px) {
     .work__container {
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    .work__container_web2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .work__container, .work__container_web2 {
-        grid-template-columns: 1fr;
     }
 }
