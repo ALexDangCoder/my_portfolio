@@ -73,9 +73,11 @@ const Contact = () => {
                         </div>
 
                         <div className="contact__channel-item" data-reveal>
-                            <span className="contact__channel-label">Phone</span>
+                            <span className="contact__channel-label">GitHub</span>
                             <span className="contact__channel-value">
-                                <a href="tel:+84378507421">+84 378 507 421</a>
+                                <a href="https://github.com/ALexDangCoder" target="_blank" rel="noopener noreferrer">
+                                    github.com/ALexDangCoder
+                                </a>
                             </span>
                         </div>
 

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.7bea5150.css",
-    "main.js": "./static/js/main.e2d1d254.js",
+    "main.js": "./static/js/main.da8340a9.js",
     "static/media/Influencer_profile.png": "./static/media/Influencer_profile.926c2d8c2f830dfcb034.png",
     "static/media/Choose_Influnecers.png": "./static/media/Choose_Influnecers.e28be23c564e281959ec.png",
     "static/media/IF_blocked.png": "./static/media/IF_blocked.ff97ead250757f2b7399.png",
@@ -36,10 +36,10 @@
     "static/media/day_meet.png": "./static/media/day_meet.70ca051550dff05b5d1b.png",
     "index.html": "./index.html",
     "main.7bea5150.css.map": "./static/css/main.7bea5150.css.map",
-    "main.e2d1d254.js.map": "./static/js/main.e2d1d254.js.map"
+    "main.da8340a9.js.map": "./static/js/main.da8340a9.js.map"
   },
   "entrypoints": [
     "static/css/main.7bea5150.css",
-    "static/js/main.e2d1d254.js"
+    "static/js/main.da8340a9.js"
   ]
 }
