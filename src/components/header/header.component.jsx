@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
+import logoImg from '../../assets/img/logo.png';
 import './header.styles.css';
 
 const Header = () => {
@@ -15,7 +16,8 @@ const Header = () => {
             <nav className="nav bd-grid">
                 <div>
                     <a href="#home" className="nav__logo" onClick={closeMenu}>
-                        ALEX DANG
+                        <img src={logoImg} alt="Alex Dang Logo" className="nav__logo-icon" />
+                        <span>ALEX DANG</span>
                     </a>
                 </div>
                 <div className={`nav__menu ${showMenu ? 'show' : ''}`} id="nav-menu">
